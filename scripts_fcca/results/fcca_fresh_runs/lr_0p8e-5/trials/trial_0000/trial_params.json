@@ -1,0 +1,15 @@
+{
+  "common_hparams": {
+    "learning_rate": 8e-06,
+    "effective_global_batch_size": 8
+  },
+  "architecture_hparams": {
+    "fcca_rank": 128,
+    "fcca_calibration_size": 256,
+    "fcca_warmup_ratio": 0.05,
+    "fcca_scale": 1.0,
+    "fcca_damping": 1e-06,
+    "fcca_target_mode": "all_attention",
+    "gradient_accumulation_steps": 4
+  }
+}

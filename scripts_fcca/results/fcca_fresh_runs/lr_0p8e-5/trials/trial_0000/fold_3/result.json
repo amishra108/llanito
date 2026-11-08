@@ -1,0 +1,195 @@
+{
+  "experiment": "fcca_l_stage6",
+  "trial_number": 0,
+  "split_name": "fold_3",
+  "fold": 3,
+  "seed": 2026,
+  "learning_rate": 8e-06,
+  "effective_global_batch_size": 8,
+  "per_device_train_batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "warmup_ratio": 0.05,
+  "architecture": {
+    "method_name": "fcca_frozen_core",
+    "paper": "arXiv:2609.00762",
+    "stage": 6,
+    "placement": {
+      "name": "fcca_attention_qkvo",
+      "region": "encoder_decoder",
+      "extra": {
+        "target_leaves": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "out_proj"
+        ],
+        "scale": 1.0,
+        "damping": 1e-06,
+        "ranks": [
+          128
+        ],
+        "target_mode": "all_attention",
+        "encoder_self_attention": true,
+        "decoder_self_attention": true,
+        "decoder_cross_attention": true,
+        "calibration_size": 256,
+        "warmup_ratio": 0.05
+      }
+    },
+    "architecture_hparams": {
+      "fcca_rank": 128,
+      "fcca_calibration_size": 256,
+      "fcca_warmup_ratio": 0.05,
+      "fcca_scale": 1.0,
+      "fcca_damping": 1e-06,
+      "fcca_target_mode": "all_attention",
+      "gradient_accumulation_steps": 4
+    },
+    "basis_rule": "G,a,d sums -> D^-1/2 G A^-1/2 -> rank-r SVD -> inverse scaling -> thin QR",
+    "calibration_data": "current CV fold training set only",
+    "validation_used_for_calibration": false
+  },
+  "train_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_3/train.csv",
+  "validation_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_3/validation.csv",
+  "training_examples": 589,
+  "validation_examples": 38,
+  "validation_history": [
+    {
+      "epoch": 1.0,
+      "global_step": 74,
+      "normalised_wer": 35.267857142857146,
+      "wer": 44.19642857142857,
+      "eval_loss": 2.030395746231079,
+      "normalised_substitutions": 61,
+      "normalised_deletions": 9,
+      "normalised_insertions": 9,
+      "normalised_reference_words": 224,
+      "eval_runtime": 14.1003
+    },
+    {
+      "epoch": 2.0,
+      "global_step": 148,
+      "normalised_wer": 34.82142857142857,
+      "wer": 44.19642857142857,
+      "eval_loss": 1.8792396783828735,
+      "normalised_substitutions": 56,
+      "normalised_deletions": 13,
+      "normalised_insertions": 9,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.638
+    },
+    {
+      "epoch": 3.0,
+      "global_step": 222,
+      "normalised_wer": 35.267857142857146,
+      "wer": 44.642857142857146,
+      "eval_loss": 1.7320247888565063,
+      "normalised_substitutions": 59,
+      "normalised_deletions": 12,
+      "normalised_insertions": 8,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.422
+    },
+    {
+      "epoch": 4.0,
+      "global_step": 296,
+      "normalised_wer": 34.375,
+      "wer": 43.75,
+      "eval_loss": 1.5258355140686035,
+      "normalised_substitutions": 58,
+      "normalised_deletions": 10,
+      "normalised_insertions": 9,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.488
+    },
+    {
+      "epoch": 5.0,
+      "global_step": 370,
+      "normalised_wer": 35.267857142857146,
+      "wer": 44.642857142857146,
+      "eval_loss": 1.3236192464828491,
+      "normalised_substitutions": 60,
+      "normalised_deletions": 10,
+      "normalised_insertions": 9,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.3338
+    },
+    {
+      "epoch": 6.0,
+      "global_step": 444,
+      "normalised_wer": 33.92857142857143,
+      "wer": 43.30357142857143,
+      "eval_loss": 1.1966967582702637,
+      "normalised_substitutions": 57,
+      "normalised_deletions": 11,
+      "normalised_insertions": 8,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.2437
+    },
+    {
+      "epoch": 7.0,
+      "global_step": 518,
+      "normalised_wer": 36.160714285714285,
+      "wer": 45.535714285714285,
+      "eval_loss": 1.1279771327972412,
+      "normalised_substitutions": 63,
+      "normalised_deletions": 12,
+      "normalised_insertions": 6,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.3154
+    },
+    {
+      "epoch": 8.0,
+      "global_step": 592,
+      "normalised_wer": 37.94642857142857,
+      "wer": 47.32142857142857,
+      "eval_loss": 1.0903916358947754,
+      "normalised_substitutions": 65,
+      "normalised_deletions": 14,
+      "normalised_insertions": 6,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.5196
+    },
+    {
+      "epoch": 9.0,
+      "global_step": 666,
+      "normalised_wer": 37.05357142857143,
+      "wer": 46.42857142857143,
+      "eval_loss": 1.0710307359695435,
+      "normalised_substitutions": 64,
+      "normalised_deletions": 13,
+      "normalised_insertions": 6,
+      "normalised_reference_words": 224,
+      "eval_runtime": 15.4291
+    },
+    {
+      "epoch": 10.0,
+      "global_step": 740,
+      "normalised_wer": 37.5,
+      "wer": 46.42857142857143,
+      "eval_loss": 1.063940405845642,
+      "normalised_substitutions": 65,
+      "normalised_deletions": 13,
+      "normalised_insertions": 6,
+      "normalised_reference_words": 224,
+      "eval_runtime": 13.5222
+    }
+  ],
+  "individual_split_best_metric": 33.92857142857143,
+  "individual_split_best_epoch": null,
+  "epoch_checkpoints": [],
+  "train_metrics": {
+    "train_runtime": 1174.9265,
+    "train_samples_per_second": 5.013,
+    "train_steps_per_second": 0.63,
+    "total_flos": 6.703084559694561e+18,
+    "train_loss": 8.167113621170456,
+    "epoch": 10.0
+  },
+  "parameters": {
+    "total_parameters": 844073984,
+    "trainable_parameters": 4718592,
+    "frozen_parameters": 839355392,
+    "trainable_percent": 0.5590258779969696
+  }
+}

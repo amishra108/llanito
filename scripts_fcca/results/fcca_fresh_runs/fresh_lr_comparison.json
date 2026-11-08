@@ -1,0 +1,29 @@
+{
+  "selection_metric": "lowest five-fold common-epoch mean normalised WER",
+  "results": [
+    {
+      "learning_rate": 0.00018,
+      "tag": "lr_1p8e-4",
+      "normalised_wer": 27.900410258720814,
+      "selected_epoch": 7
+    },
+    {
+      "learning_rate": 0.00015,
+      "tag": "lr_1p5e-4",
+      "normalised_wer": 28.347337573591254,
+      "selected_epoch": 1
+    },
+    {
+      "learning_rate": 8e-06,
+      "tag": "lr_0p8e-5",
+      "normalised_wer": 41.84931484683865,
+      "selected_epoch": 2
+    }
+  ],
+  "winner": {
+    "learning_rate": 0.00018,
+    "tag": "lr_1p8e-4",
+    "normalised_wer": 27.900410258720814,
+    "selected_epoch": 7
+  }
+}

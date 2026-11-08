@@ -1,0 +1,11 @@
+session_id,experiment,trial_number,split_name,fold,seed,learning_rate,effective_global_batch_size,per_device_train_batch_size,gradient_accumulation_steps,warmup_ratio,epoch,global_step,normalised_wer,wer,eval_loss,normalised_substitutions,normalised_deletions,normalised_insertions,normalised_reference_words
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,1.0,72,36.71875,42.578125,2.1129820346832275,79,8,7,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,2.0,144,34.765625,40.625,1.9544939994812012,75,8,6,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,3.0,216,35.546875,41.40625,1.8142210245132446,76,8,7,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,4.0,288,33.984375,39.84375,1.6300526857376099,73,10,4,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,5.0,360,32.421875,38.28125,1.4396495819091797,65,14,4,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,6.0,432,33.59375,39.453125,1.3110897541046143,65,15,6,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,7.0,504,33.203125,39.0625,1.2414240837097168,64,15,6,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,8.0,576,32.421875,38.28125,1.20228111743927,64,13,6,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,9.0,648,32.8125,38.28125,1.18209969997406,65,13,6,256
+da26cdd2b9,fcca_l_stage6,0,fold_4,4,2026,8e-06,8,1,4,0.05,10.0,720,32.8125,38.28125,1.1757599115371704,65,13,6,256

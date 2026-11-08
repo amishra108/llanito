@@ -1,0 +1,195 @@
+{
+  "experiment": "fcca_l_stage6",
+  "trial_number": 0,
+  "split_name": "fold_4",
+  "fold": 4,
+  "seed": 2026,
+  "learning_rate": 0.00018,
+  "effective_global_batch_size": 8,
+  "per_device_train_batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "warmup_ratio": 0.05,
+  "architecture": {
+    "method_name": "fcca_frozen_core",
+    "paper": "arXiv:2609.00762",
+    "stage": 6,
+    "placement": {
+      "name": "fcca_attention_qkvo",
+      "region": "encoder_decoder",
+      "extra": {
+        "target_leaves": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "out_proj"
+        ],
+        "scale": 1.0,
+        "damping": 1e-06,
+        "ranks": [
+          128
+        ],
+        "target_mode": "all_attention",
+        "encoder_self_attention": true,
+        "decoder_self_attention": true,
+        "decoder_cross_attention": true,
+        "calibration_size": 256,
+        "warmup_ratio": 0.05
+      }
+    },
+    "architecture_hparams": {
+      "fcca_rank": 128,
+      "fcca_calibration_size": 256,
+      "fcca_warmup_ratio": 0.05,
+      "fcca_scale": 1.0,
+      "fcca_damping": 1e-06,
+      "fcca_target_mode": "all_attention",
+      "gradient_accumulation_steps": 4
+    },
+    "basis_rule": "G,a,d sums -> D^-1/2 G A^-1/2 -> rank-r SVD -> inverse scaling -> thin QR",
+    "calibration_data": "current CV fold training set only",
+    "validation_used_for_calibration": false
+  },
+  "train_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_4/train.csv",
+  "validation_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_4/validation.csv",
+  "training_examples": 569,
+  "validation_examples": 36,
+  "validation_history": [
+    {
+      "epoch": 1.0,
+      "global_step": 72,
+      "normalised_wer": 31.25,
+      "wer": 35.9375,
+      "eval_loss": 0.8062611818313599,
+      "normalised_substitutions": 66,
+      "normalised_deletions": 10,
+      "normalised_insertions": 4,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.6041
+    },
+    {
+      "epoch": 2.0,
+      "global_step": 144,
+      "normalised_wer": 31.25,
+      "wer": 35.9375,
+      "eval_loss": 0.8025330305099487,
+      "normalised_substitutions": 63,
+      "normalised_deletions": 10,
+      "normalised_insertions": 7,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.3699
+    },
+    {
+      "epoch": 3.0,
+      "global_step": 216,
+      "normalised_wer": 29.6875,
+      "wer": 34.765625,
+      "eval_loss": 0.8691860437393188,
+      "normalised_substitutions": 60,
+      "normalised_deletions": 11,
+      "normalised_insertions": 5,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.3355
+    },
+    {
+      "epoch": 4.0,
+      "global_step": 288,
+      "normalised_wer": 30.078125,
+      "wer": 34.765625,
+      "eval_loss": 0.8784337043762207,
+      "normalised_substitutions": 65,
+      "normalised_deletions": 8,
+      "normalised_insertions": 4,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.4587
+    },
+    {
+      "epoch": 5.0,
+      "global_step": 360,
+      "normalised_wer": 30.859375,
+      "wer": 35.546875,
+      "eval_loss": 0.9408032298088074,
+      "normalised_substitutions": 66,
+      "normalised_deletions": 6,
+      "normalised_insertions": 7,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.4703
+    },
+    {
+      "epoch": 6.0,
+      "global_step": 432,
+      "normalised_wer": 30.46875,
+      "wer": 35.546875,
+      "eval_loss": 0.9731975197792053,
+      "normalised_substitutions": 65,
+      "normalised_deletions": 6,
+      "normalised_insertions": 7,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.4225
+    },
+    {
+      "epoch": 7.0,
+      "global_step": 504,
+      "normalised_wer": 30.46875,
+      "wer": 35.546875,
+      "eval_loss": 1.0259941816329956,
+      "normalised_substitutions": 64,
+      "normalised_deletions": 6,
+      "normalised_insertions": 8,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.4369
+    },
+    {
+      "epoch": 8.0,
+      "global_step": 576,
+      "normalised_wer": 31.25,
+      "wer": 36.328125,
+      "eval_loss": 1.0343449115753174,
+      "normalised_substitutions": 65,
+      "normalised_deletions": 6,
+      "normalised_insertions": 9,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.3804
+    },
+    {
+      "epoch": 9.0,
+      "global_step": 648,
+      "normalised_wer": 30.46875,
+      "wer": 35.546875,
+      "eval_loss": 1.051254391670227,
+      "normalised_substitutions": 64,
+      "normalised_deletions": 6,
+      "normalised_insertions": 8,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.6465
+    },
+    {
+      "epoch": 10.0,
+      "global_step": 720,
+      "normalised_wer": 31.640625,
+      "wer": 36.71875,
+      "eval_loss": 1.0514755249023438,
+      "normalised_substitutions": 66,
+      "normalised_deletions": 6,
+      "normalised_insertions": 9,
+      "normalised_reference_words": 256,
+      "eval_runtime": 14.4717
+    }
+  ],
+  "individual_split_best_metric": 29.6875,
+  "individual_split_best_epoch": null,
+  "epoch_checkpoints": [],
+  "train_metrics": {
+    "train_runtime": 1141.8935,
+    "train_samples_per_second": 4.983,
+    "train_steps_per_second": 0.631,
+    "total_flos": 6.47586133353431e+18,
+    "train_loss": 1.1184082022971578,
+    "epoch": 10.0
+  },
+  "parameters": {
+    "total_parameters": 844073984,
+    "trainable_parameters": 4718592,
+    "frozen_parameters": 839355392,
+    "trainable_percent": 0.5590258779969696
+  }
+}

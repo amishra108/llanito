@@ -1,0 +1,225 @@
+============================================================================
+;; LLANITO NORMALISATION - MAPPINGS
+;; ============================================================================
+;;
+;; Each group is ONE word written more than one way; any form scores as correct.
+;;   Format:  [TOKEN] => [{ALT1 / ALT2}]
+;;
+;; ############################################################################
+;; ##  IMPORTANT - THE TWO SECTIONS ARE NOT INTERCHANGEABLE                  ##
+;; ##                                                                        ##
+;; ##  SECTION 1 applies to the PASSAGE recordings ONLY.                     ##
+;; ##  SECTION 2 applies to the SENTENCE-TASK recordings ONLY.               ##
+;; ##                                                                        ##
+;; ##  Please do not apply section 1 when scoring the sentence task. Several ##
+;; ##  of its forms are ordinary words there and would be wrongly accepted:  ##
+;; ##      'to'  is English 'to' in 8 sentence-task tokens                   ##
+;; ##            ('mr ponder to dad al club')                                ##
+;; ##      'do'  is English 'do' in 3  ('to do un cafÃ©')                     ##
+;; ##      'ma'  is 'me' or a hesitation in 3  ('ya ma comprÃ©')              ##
+;; ##      'al'  is correct 'al' in 192, 'el' correct in 459                 ##
+;; ############################################################################
+;;  
+;;	The 2 tasks differ :
+
+;;     - the passage was read from a text already printed in Llanito spelling,
+;;       so the transcript follows the stimulus;
+;;     - the sentence task was free translation with no printed text;
+;;     - and both tasks were force-aligned with MFA, where a word absent from the
+;;       dictionary fails to align. The Spanish dictionary supplies 96k Spanish
+;;       words and no Llanito ones.
+;;   
+
+
+;; ############################################################################
+;; ##  SECTION 1 - PASSAGE RECORDINGS ONLY                                   ##
+;; ############################################################################
+;; Spanish form first. Counts are passage tokens.
+
+;; r for l in the article   (er 292)
+[EL] => [{EL / ER}]
+[ER] => [{EL / ER}]
+
+;; k for qu   (ke 170)
+[QUE] => [{QUE / KE}]
+[KE] => [{QUE / KE}]
+
+;; r for l   (der 96)
+[DEL] => [{DEL / DER}]
+[DER] => [{DEL / DER}]
+
+;; coda -s elided (ma) or aspirated (mah)   (ma/mah 149)
+[MÃS] => [{MÃS / MA / MAH}]
+[MA] => [{MÃS / MA / MAH}]
+[MAH] => [{MÃS / MA / MAH}]
+
+;; k for c   (kapa 95)
+[CAPA] => [{CAPA / KAPA}]
+[KAPA] => [{CAPA / KAPA}]
+
+;; k/c and final -s   (entonse 70)
+[ENTONCES] => [{ENTONCES / ENTONSE}]
+[ENTONSE] => [{ENTONCES / ENTONSE}]
+
+;; aspirated plural   (loh 50)
+[LOS] => [{LOS / LOH}]
+[LOH] => [{LOS / LOH}]
+
+;; velar nasal   (kong 47)
+[CON] => [{CON / KONG}]
+[KONG] => [{CON / KONG}]
+
+;; final -s loss   (do 48)
+[DOS] => [{DOS / DO}]
+[DO] => [{DOS / DO}]
+
+;; k for qu, velar nasal   (kedarong 25)
+[QUEDARON] => [{QUEDARON / KEDARONG}]
+[KEDARONG] => [{QUEDARON / KEDARONG}]
+
+;; k for qu   (kitara 25)
+[QUITARA] => [{QUITARA / KITARA}]
+[KITARA] => [{QUITARA / KITARA}]
+
+;; k for c   (kual 24)
+[CUÃL] => [{CUÃL / KUAL}]
+[KUAL] => [{CUÃL / KUAL}]
+
+;; seseo   (fuersa 24)
+[FUERZA] => [{FUERZA / FUERSA}]
+[FUERSA] => [{FUERZA / FUERSA}]
+
+;; k for c   (kontra 24)
+[CONTRA] => [{CONTRA / KONTRA}]
+[KONTRA] => [{CONTRA / KONTRA}]
+
+;; b/v   (soplava 24)
+[SOPLABA] => [{SOPLABA / SOPLAVA}]
+[SOPLAVA] => [{SOPLABA / SOPLAVA}]
+
+;; b/v   (liava 24)
+[LIABA] => [{LIABA / LIAVA}]
+[LIAVA] => [{LIABA / LIAVA}]
+
+;; aspirated initial es-   (htaria 24)
+[ESTARÃA] => [{ESTARÃA / HTARIA}]
+[HTARIA] => [{ESTARÃA / HTARIA}]
+
+;; k for c and qu   (konke 24)
+[CONQUE] => [{CONQUE / KONKE}]
+[KONKE] => [{CONQUE / KONKE}]
+
+;; assimilation, final -r loss   (ammiti 24)
+[ADMITIR] => [{ADMITIR / AMMITI}]
+[AMMITI] => [{ADMITIR / AMMITI}]
+
+;; gu > g   (ensegida 24)
+[ENSEGUIDA] => [{ENSEGUIDA / ENSEGIDA}]
+[ENSEGIDA] => [{ENSEGUIDA / ENSEGIDA}]
+
+;; k for qu   (kitÃ³ 24)
+[QUITÃ“] => [{QUITÃ“ / KITÃ“}]
+[KITÃ“] => [{QUITÃ“ / KITÃ“}]
+
+;; final syllable loss   (to 24)
+[TODO] => [{TODO / TO}]
+[TO] => [{TODO / TO}]
+
+;; b/v, ll > y, final -r loss   (vriya 23)
+[BRILLAR] => [{BRILLAR / VRIYA}]
+[VRIYA] => [{BRILLAR / VRIYA}]
+
+;; r for l   (ar 23)
+[AL] => [{AL / AR}]
+[AR] => [{AL / AR}]
+
+;; final -l loss   (finÃ¡ 23)
+[FINAL] => [{FINAL / FINÃ}]
+[FINÃ] => [{FINAL / FINÃ}]
+
+;; k for c, b/v   (akavÃ³ 23)
+[ACABÃ“] => [{ACABÃ“ / AKAVÃ“}]
+[AKAVÃ“] => [{ACABÃ“ / AKAVÃ“}]
+
+;; silent h, seseo   (ase 23)
+[HACER] => [{HACER / ASE}]
+[ASE] => [{HACER / ASE}]
+
+;; k for c, -ado > -au   (konsiderau 23)
+[CONSIDERADO] => [{CONSIDERADO / KONSIDERAU}]
+[KONSIDERAU] => [{CONSIDERADO / KONSIDERAU}]
+
+;; ll > y   (yego 23)
+[LLEGÃ“] => [{LLEGÃ“ / YEGO}]
+[YEGO] => [{LLEGÃ“ / YEGO}]
+
+;; -ado > -au   (liau 23)
+[LIADO] => [{LIADO / LIAU}]
+[LIAU] => [{LIADO / LIAU}]
+
+;; b/v, velar nasal   (vieng 23)
+[BIEN] => [{BIEN / VIENG}]
+[VIENG] => [{BIEN / VIENG}]
+
+;; b/v, -ado > -au   (avrigau 23)
+[ABRIGADO] => [{ABRIGADO / AVRIGAU}]
+[AVRIGAU] => [{ABRIGADO / AVRIGAU}]
+
+;; aspirated initial es-, velar nasal   (htavang 23)
+[ESTABAN] => [{ESTABAN / HTAVANG}]
+[HTAVANG] => [{ESTABAN / HTAVANG}]
+
+;; seseo   (empeso 22)
+[EMPEZÃ“] => [{EMPEZÃ“ / EMPESO}]
+[EMPESO] => [{EMPEZÃ“ / EMPESO}]
+
+;; ch > sh   (musha 22)
+[MUCHA] => [{MUCHA / MUSHA}]
+[MUSHA] => [{MUCHA / MUSHA}]
+
+;; k for c, final -r loss   (kalÃ³ 22)
+[CALOR] => [{CALOR / KALÃ“}]
+[KALÃ“] => [{CALOR / KALÃ“}]
+
+;; reduction   (pa 21)
+[PARA] => [{PARA / PA}]
+[PA] => [{PARA / PA}]
+
+;; silent h, seseo   (isiera 21)
+[HICIERA] => [{HICIERA / ISIERA}]
+[ISIERA] => [{HICIERA / ISIERA}]
+
+
+######################################################################################
+## -- omitted from section 1, and why --					##
+######################################################################################
+;;  
+;;  a ver / ave      and    el otro / l'otro
+;;       Both need a two-token entry, I am not sure if the GLM format support it.
+;;      
+;;     
+;;  English code-switches printed in the text. 
+
+;;  Also:  porfiando, remedio, gana, pero, primero, pudiera, tuvo, norte, viento, sol,
+;;   fuerte, era, su, un, una - already standard Spanish in the printed text.
+
+
+;; ############################################################################
+;; ##  SECTION 2 - SENTENCE-TASK RECORDINGS ONLY                             ##
+;; ############################################################################
+;;
+;;
+;;   'arme'/'arte' are the Llanito forms of 'hazme'/'hazte'. Checked by speaker:
+;;
+;;       22 speakers use arme/arte and never hazme/hazte
+;;        1 speaker  (Humbert Hernandez) uses hazme/hazte and never arme/arte
+;;        0 speakers use both
+;;
+
+;; the Llanito form of 'hazme'.  40 tokens, 22 speakers.
+[HAZME] => [{HAZME / ARME}]
+[ARME] => [{HAZME / ARME}]
+
+;; the Llanito form of 'hazte'.  24 tokens.
+[HAZTE] => [{HAZTE / ARTE}]
+[ARTE] => [{HAZTE / ARTE}]

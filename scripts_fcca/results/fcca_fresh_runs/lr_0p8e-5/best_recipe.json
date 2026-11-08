@@ -1,0 +1,148 @@
+{
+  "experiment": "fcca_l_stage6",
+  "best_trial": 0,
+  "best_objective_normalised_wer": 41.84931484683865,
+  "best_params": {
+    "learning_rate": 8e-06,
+    "effective_global_batch_size": 8,
+    "fcca_rank": 128,
+    "fcca_gradient_accumulation_steps": 4
+  },
+  "selected_epoch": 2,
+  "selection": {
+    "selected_epoch": 2,
+    "objective_normalised_wer": 41.84931484683865,
+    "cv_curve": [
+      {
+        "epoch": 1,
+        "mean_normalised_wer": 42.23037155358359,
+        "std_normalised_wer_population": 30.300033312456115,
+        "split_scores": {
+          "fold_1": 13.46938775510204,
+          "fold_2": 25.203252032520325,
+          "fold_3": 35.267857142857146,
+          "fold_4": 36.71875,
+          "fold_5": 100.49261083743843
+        }
+      },
+      {
+        "epoch": 2,
+        "mean_normalised_wer": 41.84931484683865,
+        "std_normalised_wer_population": 30.56087345760043,
+        "split_scores": {
+          "fold_1": 13.877551020408163,
+          "fold_2": 24.796747967479675,
+          "fold_3": 34.82142857142857,
+          "fold_4": 34.765625,
+          "fold_5": 100.98522167487684
+        }
+      },
+      {
+        "epoch": 3,
+        "mean_normalised_wer": 42.601204153865076,
+        "std_normalised_wer_population": 30.3532862404857,
+        "split_scores": {
+          "fold_1": 15.510204081632653,
+          "fold_2": 25.203252032520325,
+          "fold_3": 35.267857142857146,
+          "fold_4": 35.546875,
+          "fold_5": 101.47783251231527
+        }
+      },
+      {
+        "epoch": 4,
+        "mean_normalised_wer": 42.045389586658885,
+        "std_normalised_wer_population": 30.81100358351041,
+        "split_scores": {
+          "fold_1": 14.69387755102041,
+          "fold_2": 25.203252032520325,
+          "fold_3": 34.375,
+          "fold_4": 33.984375,
+          "fold_5": 101.9704433497537
+        }
+      },
+      {
+        "epoch": 5,
+        "mean_normalised_wer": 42.416819087811746,
+        "std_normalised_wer_population": 30.807874855725036,
+        "split_scores": {
+          "fold_1": 15.10204081632653,
+          "fold_2": 26.82926829268293,
+          "fold_3": 35.267857142857146,
+          "fold_4": 32.421875,
+          "fold_5": 102.46305418719213
+        }
+      },
+      {
+        "epoch": 6,
+        "mean_normalised_wer": 42.58137680008925,
+        "std_normalised_wer_population": 31.10556456756292,
+        "split_scores": {
+          "fold_1": 16.3265306122449,
+          "fold_2": 25.609756097560975,
+          "fold_3": 33.92857142857143,
+          "fold_4": 33.59375,
+          "fold_5": 103.44827586206897
+        }
+      },
+      {
+        "epoch": 7,
+        "mean_normalised_wer": 43.29276865813609,
+        "std_normalised_wer_population": 31.02630158021625,
+        "split_scores": {
+          "fold_1": 17.142857142857142,
+          "fold_2": 26.01626016260163,
+          "fold_3": 36.160714285714285,
+          "fold_4": 33.203125,
+          "fold_5": 103.94088669950739
+        }
+      },
+      {
+        "epoch": 8,
+        "mean_normalised_wer": 43.57496232828707,
+        "std_normalised_wer_population": 30.961171355792658,
+        "split_scores": {
+          "fold_1": 17.142857142857142,
+          "fold_2": 26.422764227642276,
+          "fold_3": 37.94642857142857,
+          "fold_4": 32.421875,
+          "fold_5": 103.94088669950739
+        }
+      },
+      {
+        "epoch": 9,
+        "mean_normalised_wer": 43.65467072026456,
+        "std_normalised_wer_population": 31.091902894436135,
+        "split_scores": {
+          "fold_1": 17.551020408163264,
+          "fold_2": 26.422764227642276,
+          "fold_3": 37.05357142857143,
+          "fold_4": 32.8125,
+          "fold_5": 104.43349753694582
+        }
+      },
+      {
+        "epoch": 10,
+        "mean_normalised_wer": 43.74395643455027,
+        "std_normalised_wer_population": 31.073454034295718,
+        "split_scores": {
+          "fold_1": 17.551020408163264,
+          "fold_2": 26.422764227642276,
+          "fold_3": 37.5,
+          "fold_4": 32.8125,
+          "fold_5": 104.43349753694582
+        }
+      }
+    ],
+    "scores_at_selected_epoch": {
+      "fold_1": 13.877551020408163,
+      "fold_2": 24.796747967479675,
+      "fold_3": 34.82142857142857,
+      "fold_4": 34.765625,
+      "fold_5": 100.98522167487684
+    }
+  },
+  "warmup_ratio": 0.05,
+  "hpo_seed": 2026,
+  "fixed_test_used": false
+}

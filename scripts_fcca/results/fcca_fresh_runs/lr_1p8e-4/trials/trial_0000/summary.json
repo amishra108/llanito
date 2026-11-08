@@ -1,0 +1,149 @@
+{
+  "trial_number": 0,
+  "common_hparams": {
+    "learning_rate": 0.00018,
+    "effective_global_batch_size": 8
+  },
+  "architecture_hparams": {
+    "fcca_rank": 128,
+    "fcca_calibration_size": 256,
+    "fcca_warmup_ratio": 0.05,
+    "fcca_scale": 1.0,
+    "fcca_damping": 1e-06,
+    "fcca_target_mode": "all_attention",
+    "gradient_accumulation_steps": 4
+  },
+  "selection": {
+    "selected_epoch": 7,
+    "objective_normalised_wer": 27.900410258720814,
+    "cv_curve": [
+      {
+        "epoch": 1,
+        "mean_normalised_wer": 29.86550966055051,
+        "std_normalised_wer_population": 8.49143291133191,
+        "split_scores": {
+          "fold_1": 17.551020408163264,
+          "fold_2": 25.203252032520325,
+          "fold_3": 43.30357142857143,
+          "fold_4": 31.25,
+          "fold_5": 32.01970443349754
+        }
+      },
+      {
+        "epoch": 2,
+        "mean_normalised_wer": 45.285820131248464,
+        "std_normalised_wer_population": 30.744916274542625,
+        "split_scores": {
+          "fold_1": 21.63265306122449,
+          "fold_2": 23.577235772357724,
+          "fold_3": 45.535714285714285,
+          "fold_4": 31.25,
+          "fold_5": 104.43349753694582
+        }
+      },
+      {
+        "epoch": 3,
+        "mean_normalised_wer": 29.482852665877118,
+        "std_normalised_wer_population": 10.053925221755785,
+        "split_scores": {
+          "fold_1": 14.69387755102041,
+          "fold_2": 26.01626016260163,
+          "fold_3": 45.982142857142854,
+          "fold_4": 29.6875,
+          "fold_5": 31.03448275862069
+        }
+      },
+      {
+        "epoch": 4,
+        "mean_normalised_wer": 28.709648446216164,
+        "std_normalised_wer_population": 7.625098640723914,
+        "split_scores": {
+          "fold_1": 17.959183673469386,
+          "fold_2": 24.390243902439025,
+          "fold_3": 41.07142857142857,
+          "fold_4": 30.078125,
+          "fold_5": 30.049261083743843
+        }
+      },
+      {
+        "epoch": 5,
+        "mean_normalised_wer": 29.927958972697574,
+        "std_normalised_wer_population": 8.183473942698763,
+        "split_scores": {
+          "fold_1": 17.551020408163264,
+          "fold_2": 28.86178861788618,
+          "fold_3": 43.30357142857143,
+          "fold_4": 30.859375,
+          "fold_5": 29.064039408866993
+        }
+      },
+      {
+        "epoch": 6,
+        "mean_normalised_wer": 29.13944666386319,
+        "std_normalised_wer_population": 8.228176819340796,
+        "split_scores": {
+          "fold_1": 17.142857142857142,
+          "fold_2": 27.64227642276423,
+          "fold_3": 42.857142857142854,
+          "fold_4": 30.46875,
+          "fold_5": 27.586206896551722
+        }
+      },
+      {
+        "epoch": 7,
+        "mean_normalised_wer": 27.900410258720814,
+        "std_normalised_wer_population": 7.852277562037728,
+        "split_scores": {
+          "fold_1": 17.142857142857142,
+          "fold_2": 25.203252032520325,
+          "fold_3": 41.07142857142857,
+          "fold_4": 30.46875,
+          "fold_5": 25.615763546798032
+        }
+      },
+      {
+        "epoch": 8,
+        "mean_normalised_wer": 28.36146321438584,
+        "std_normalised_wer_population": 7.6833641286834835,
+        "split_scores": {
+          "fold_1": 17.142857142857142,
+          "fold_2": 25.203252032520325,
+          "fold_3": 40.625,
+          "fold_4": 31.25,
+          "fold_5": 27.586206896551722
+        }
+      },
+      {
+        "epoch": 9,
+        "mean_normalised_wer": 28.10635920684506,
+        "std_normalised_wer_population": 7.731374343644017,
+        "split_scores": {
+          "fold_1": 16.73469387755102,
+          "fold_2": 25.609756097560975,
+          "fold_3": 40.625,
+          "fold_4": 30.46875,
+          "fold_5": 27.093596059113302
+        }
+      },
+      {
+        "epoch": 10,
+        "mean_normalised_wer": 28.42203501985319,
+        "std_normalised_wer_population": 7.789969466945751,
+        "split_scores": {
+          "fold_1": 16.73469387755102,
+          "fold_2": 26.01626016260163,
+          "fold_3": 40.625,
+          "fold_4": 31.640625,
+          "fold_5": 27.093596059113302
+        }
+      }
+    ],
+    "scores_at_selected_epoch": {
+      "fold_1": 17.142857142857142,
+      "fold_2": 25.203252032520325,
+      "fold_3": 41.07142857142857,
+      "fold_4": 30.46875,
+      "fold_5": 25.615763546798032
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "experiment": {
+    "name": "fcca_l_stage6",
+    "model_type": "whisper_fcca",
+    "domain_category": "l",
+    "project_root": "/research/milsrg1/user_workspace/am3244/llanito-workspace-v2",
+    "output_root": "/research/milsrg1/user_workspace/am3244/llanito-workspace-v2/week9/results/fcca_fresh_runs/lr_0p8e-5",
+    "base_model": "openai/whisper-medium",
+    "language": "es",
+    "whisper_task": "transcribe",
+    "normalisation_file": "/research/milsrg1/user_workspace/am3244/llanito-workspace-v2/scripts/resources/LLanito_normalisation_v2.txt",
+    "data": {
+      "mode": "cv",
+      "train_manifest": null,
+      "validation_manifest": null,
+      "fold_train_template": "data/processed/fullLoRA/fold_{fold}/train.csv",
+      "fold_validation_template": "data/processed/fullLoRA/fold_{fold}/validation.csv",
+      "folds": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "union_manifest": null,
+      "identity_columns": [
+        "audio_path",
+        "audio_filepath",
+        "audio_file",
+        "filepath",
+        "path",
+        "file",
+        "wav_path",
+        "wav",
+        "audio",
+        "recording",
+        "utterance_id",
+        "id"
+      ]
+    },
+    "search": {
+      "learning_rate_low": 8e-06,
+      "learning_rate_high": 8e-06,
+      "effective_global_batch_sizes": [
+        8
+      ],
+      "startup_recipes": [
+        [
+          [
+            "learning_rate",
+            8e-06
+          ],
+          [
+            "effective_global_batch_size",
+            8
+          ]
+        ]
+      ]
+    },
+    "training": {
+      "gradient_accumulation_steps": 4,
+      "world_size": 2,
+      "per_device_eval_batch_size": 1,
+      "optimizer": "adamw_torch",
+      "lr_scheduler_type": "linear",
+      "weight_decay": 0.01,
+      "max_grad_norm": 1.0,
+      "warmup_ratio": 0.05,
+      "warmup_steps": 0,
+      "fp16": true,
+      "bf16": false,
+      "gradient_checkpointing": false,
+      "dataloader_workers": 4,
+      "logging_steps": 10,
+      "generation_num_beams": 1,
+      "generation_max_length": 225,
+      "max_epochs": 10,
+      "retain_all_epoch_checkpoints": false,
+      "hpo_seed": 2026,
+      "final_model_seed": 2026,
+      "optuna_sampler_seed": 2026
+    },
+    "placement": {
+      "name": "fcca_attention_qkvo",
+      "region": "encoder_decoder",
+      "layer_indices": null,
+      "layer_stride": null,
+      "target_modules": [],
+      "representation_layers": [],
+      "temporal_policy": null,
+      "route_policy": null,
+      "extra": {
+        "target_leaves": [
+          "q_proj",
+          "k_proj",
+          "v_proj",
+          "out_proj"
+        ],
+        "scale": 1.0,
+        "damping": 1e-06,
+        "ranks": [
+          128
+        ],
+        "target_mode": "all_attention",
+        "encoder_self_attention": true,
+        "decoder_self_attention": true,
+        "decoder_cross_attention": true,
+        "calibration_size": 256,
+        "warmup_ratio": 0.05
+      }
+    },
+    "wandb_project": "speech-hpo",
+    "study_name": "week9_fcca_lr_0p8e-5",
+    "description": "Week 9 normal FCCA LR endpoint run. Whisper-medium; five-fold CV; rank=128; calibration=256; all-attention q/k/v/o; EBS=8; GA=4; world_size=2; warmup=.05; scale=1; damping=1e-6; max_epochs=10. Only learning rate differs."
+  },
+  "plugin": {
+    "method_name": "fcca_frozen_core"
+  },
+  "resolved_splits": [
+    {
+      "split_name": "fold_1",
+      "fold": 1,
+      "train_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_1/train.csv",
+      "validation_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_1/validation.csv"
+    },
+    {
+      "split_name": "fold_2",
+      "fold": 2,
+      "train_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_2/train.csv",
+      "validation_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_2/validation.csv"
+    },
+    {
+      "split_name": "fold_3",
+      "fold": 3,
+      "train_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_3/train.csv",
+      "validation_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_3/validation.csv"
+    },
+    {
+      "split_name": "fold_4",
+      "fold": 4,
+      "train_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_4/train.csv",
+      "validation_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_4/validation.csv"
+    },
+    {
+      "split_name": "fold_5",
+      "fold": 5,
+      "train_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_5/train.csv",
+      "validation_manifest": "/research/milsrg1/user_workspace/am3244/llanito-workspace/data/processed/fullLoRA/fold_5/validation.csv"
+    }
+  ],
+  "fixed_test_used": false
+}
